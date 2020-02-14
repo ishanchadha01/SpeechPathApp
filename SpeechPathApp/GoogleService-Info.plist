@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyBUQyjWUJ4SVopA1FPmEySMDr0B6Bk8RBc</string>
+	<key>BUNDLE_ID</key>
+	<string>Ishan-Chadha.SpeechPathApp</string>
+	<key>CLIENT_ID</key>
+	<string>175294658603-takab7lnun9j4ktn2q5ivihnjq78qop0.apps.googleusercontent.com</string>
+	<key>DATABASE_URL</key>
+	<string>https://speechauth.firebaseio.com</string>
+	<key>GCM_SENDER_ID</key>
+	<string>175294658603</string>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:175294658603:ios:2e02fc348ba0a783e1526e</string>
+	<key>IS_ADS_ENABLED</key>
+	<false/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>PROJECT_ID</key>
+	<string>speechauth</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.175294658603-takab7lnun9j4ktn2q5ivihnjq78qop0</string>
+	<key>STORAGE_BUCKET</key>
+	<string>speechauth.appspot.com</string>
+	<key>UIMainStoryboardFile</key>
+	<string>Main</string>
+</dict>
+</plist>

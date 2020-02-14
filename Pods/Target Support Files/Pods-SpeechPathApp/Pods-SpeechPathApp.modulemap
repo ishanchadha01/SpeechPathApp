@@ -1,0 +1,6 @@
+framework module Pods_SpeechPathApp {
+  umbrella header "Pods-SpeechPathApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
