@@ -10,11 +10,15 @@ import UIKit
 
 class AnswerViewController: UIViewController {
 
+    @IBOutlet weak var phonemes: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        let image1 = UIImage(named: "\(word).png") as UIImage?
+        phonemes.setBackgroundImage(image1, for: .normal)
     }
+
     
 
     /*

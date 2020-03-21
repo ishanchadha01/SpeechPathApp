@@ -27,6 +27,17 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         printFirstName(self.Welcome)
         homeTableView.dataSource = self
         homeTableView.delegate = self
+        updateProgressBar()
+    }
+    
+    func updateProgressBar() -> Void {
+        let userID = Auth.auth().currentUser?.uid
+        Firestore.firestore().collection("users").document(userID!).getDocument { (document, error) in
+            if let document = document {
+                let progress = document["moduleprogress"]
+                self.progressBar.setProgress(((progress as! Float) / 24.0), animated: false)
+            }
+        }
     }
     
     func printFirstName(_ label: UILabel) -> Void {

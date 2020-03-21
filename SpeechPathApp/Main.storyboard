@@ -254,7 +254,7 @@
             <objects>
                 <viewController storyboardIdentifier="HomeVC" title="HomeViewController" id="OdO-1s-kdf" customClass="HomeViewController" customModule="SpeechPathApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kqk-ZY-kMN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H9x-h3-iC9">
@@ -303,6 +303,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="QlO-gs-WF1"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Yxj-JM-6gb"/>
                     <connections>
                         <outlet property="Welcome" destination="x9T-E1-3r4" id="yvq-Qy-Xh4"/>
                         <outlet property="homeTableView" destination="DX7-Xx-GKY" id="bGf-WZ-i9n"/>
@@ -378,6 +379,14 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="so4-fg-9f2"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="nSp-Tz-pXx"/>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="17p-DD-B00">
+                                <rect key="frame" x="26" y="44" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <segue destination="OdO-1s-kdf" kind="show" id="NB6-1N-HOi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="uE0-PS-Cf7"/>
@@ -418,6 +427,7 @@
                                 </state>
                                 <connections>
                                     <action selector="dieTopLeft:" destination="mmE-u0-OHz" eventType="touchUpInside" id="fp0-X9-3fu"/>
+                                    <action selector="dieTopRight:" destination="mmE-u0-OHz" eventType="touchUpInside" id="BuV-L6-xX3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yzp-Ou-8Os">
@@ -427,6 +437,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="dieBottomLeft:" destination="mmE-u0-OHz" eventType="touchUpInside" id="hGr-UR-DYN"/>
                                     <action selector="dieTopLeft:" destination="mmE-u0-OHz" eventType="touchUpInside" id="srN-VG-8Mg"/>
                                 </connections>
                             </button>
@@ -437,6 +448,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="dieBottomRight:" destination="mmE-u0-OHz" eventType="touchUpInside" id="gSi-Ha-cc2"/>
                                     <action selector="dieTopLeft:" destination="mmE-u0-OHz" eventType="touchUpInside" id="7Ix-sr-eLi"/>
                                 </connections>
                             </button>
@@ -447,6 +459,16 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Szl-zu-qk0">
+                                <rect key="frame" x="175" y="628" width="64" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Try Again">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="tryAgain:" destination="mmE-u0-OHz" eventType="touchUpInside" id="Gxl-FG-6xI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="F0Y-bw-k06"/>
@@ -457,33 +479,56 @@
                         <outlet property="dieBotRightButton" destination="pbZ-4R-fDE" id="BqD-yL-xbl"/>
                         <outlet property="dieTopLeftButton" destination="BM8-Kb-iE3" id="BHY-DF-THM"/>
                         <outlet property="dieTopRightButton" destination="hZX-2q-HJ4" id="k3A-nG-pw0"/>
+                        <outlet property="tryAgainButton" destination="Szl-zu-qk0" id="F6J-zK-efg"/>
                         <outlet property="wordLabel" destination="pD0-Hb-MLn" id="E9E-Av-frl"/>
+                        <segue destination="miP-Rp-G5l" kind="show" identifier="toAnswer" id="Aen-1h-LYE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1K2-1r-PiL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4960.8695652173919" y="-128.57142857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Answer View Controller-->
         <scene sceneID="29z-yA-kau">
             <objects>
-                <viewController id="miP-Rp-G5l" sceneMemberID="viewController">
+                <viewController id="miP-Rp-G5l" customClass="AnswerViewController" customModule="SpeechPathApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GSe-Wb-Snp">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8XH-jY-pZF">
+                                <rect key="frame" x="176" y="528" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Continue">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="DCj-lu-njt" kind="show" id="shz-qO-Hyb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gIN-wz-eze">
+                                <rect key="frame" x="64" y="356" width="286" height="123"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="sPZ-6M-s44"/>
                     </view>
+                    <navigationItem key="navigationItem" id="m81-Fl-U4J"/>
+                    <connections>
+                        <outlet property="phonemes" destination="gIN-wz-eze" id="b9V-bk-Y9j"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6mf-vh-B4g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4961" y="670"/>
+            <point key="canvasLocation" x="4960.8695652173919" y="669.64285714285711"/>
         </scene>
     </scenes>
     <resources>
         <image name="arrow.left" catalog="system" width="64" height="48"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="shz-qO-Hyb"/>
         <segue reference="oAr-rW-Jjy"/>
         <segue reference="Sj7-FZ-Dgt"/>
     </inferredMetricsTieBreakers>
