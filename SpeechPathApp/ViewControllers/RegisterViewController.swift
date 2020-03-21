@@ -25,6 +25,8 @@ class RegisterViewController: UIViewController {
         super.viewDidLoad()
         setUpElements()
     }
+    
+    // sets up page with formatting
     func setUpElements() {
         // hide error label
         errorLabel.alpha = 0
@@ -36,17 +38,6 @@ class RegisterViewController: UIViewController {
         Utilities.styleFilledButton(signUpButton)
         Utilities.styleFilledButton(backButton)
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     // check the fields and validate the data is correct
     // return nil if everything fine, otherwise return error message
@@ -91,11 +82,13 @@ class RegisterViewController: UIViewController {
         }
     }
     
+    // shows error if user cannot register
     func showError(_ message: String) {
         errorLabel.text = message
         errorLabel.alpha = 1
     }
     
+    // sets home as root view once user is registered
     func transitionToHome() {
         let homeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
         view.window?.rootViewController = homeViewController

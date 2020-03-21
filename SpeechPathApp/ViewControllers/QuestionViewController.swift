@@ -11,6 +11,9 @@ import Firebase
 import FirebaseDatabase
 import FirebaseAuth
 import FirebaseFirestore
+import AVFoundation
+
+var player: AVAudioPlayer?
 
 class QuestionViewController: UIViewController {
     
@@ -25,7 +28,14 @@ class QuestionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // plays sound
+        playSound(word)
+        
+        // load question
         wordLabel.text = ("how many phonemes are in the word \(word)").uppercased()
+        
+        // load dice
         let image1 = UIImage(named: "Dice2@2x.png") as UIImage?
         let button1   = dieTopLeftButton!
         button1.setBackgroundImage(image1, for: UIControl.State.normal)
@@ -41,6 +51,7 @@ class QuestionViewController: UIViewController {
         tryAgainButton.alpha = 0
     }
     
+    // if top left die is clicked
     @IBAction func dieTopLeft(_ sender: Any) {
         if (countTaskAnswer == 2) {
             correctTransition()
@@ -48,7 +59,8 @@ class QuestionViewController: UIViewController {
             incorrectTransition()
         }
     }
-    
+ 
+    // if top right die is clicked
     @IBAction func dieTopRight(_ sender: Any) {
         if (countTaskAnswer == 3) {
             correctTransition()
@@ -56,7 +68,8 @@ class QuestionViewController: UIViewController {
             incorrectTransition()
         }
     }
-    
+
+    // if bottom left die is clicked
     @IBAction func dieBottomLeft(_ sender: Any) {
         if (countTaskAnswer == 4) {
             correctTransition()
@@ -64,7 +77,8 @@ class QuestionViewController: UIViewController {
             incorrectTransition()
         }
     }
-    
+   
+    // if bottom right die is clicked
     @IBAction func dieBottomRight(_ sender: Any) {
         if (countTaskAnswer == 5) {
             correctTransition()
@@ -73,10 +87,12 @@ class QuestionViewController: UIViewController {
         }
     }
     
+    // reload page if try again is clicked
     @IBAction func tryAgain(_ sender: Any) {
         viewDidLoad()
     }
     
+    // remove all dice and load try again button
     func incorrectTransition() {
         dieTopLeftButton.setBackgroundImage(nil, for: .normal)
         dieTopRightButton.setBackgroundImage(nil, for: .normal)
@@ -85,11 +101,13 @@ class QuestionViewController: UIViewController {
         tryAgainButton.alpha = 1
     }
     
+    // if answered correctly
     func correctTransition() {
         updateProgress(1)
         performSegue(withIdentifier: "toAnswer", sender: self)
     }
     
+    // updates progress of user in firebase
     func updateProgress(_ num: Int) -> Void {
         let userID = Auth.auth().currentUser?.uid
         var update = num as NSNumber
@@ -108,6 +126,21 @@ class QuestionViewController: UIViewController {
                     Firestore.firestore().collection("users").document(userID!).setData(["moduleprogress": update])
                     Firestore.firestore().collection("users").document(userID!).updateData(["progressarray": FieldValue.arrayUnion((newArr as NSArray) as! [Any])])
                 }
+            }
+        }
+    }
+    
+    // plays sound for page
+    func playSound(_ sound: String) -> Void {
+        if let path = Bundle.main.path(forResource: sound, ofType: "MP3") {
+            do {
+                player = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
+                player?.play()
+                if player!.play() {
+                    print(word)
+                }
+            } catch let error {
+                print(error.localizedDescription)
             }
         }
     }

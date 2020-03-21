@@ -23,10 +23,12 @@ class CountingViewController: UIViewController, UITableViewDataSource, UITableVi
         countingTableView.dataSource = self
     }
     
+    // table length equals number of tasks
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return countTaskArray.count
     }
     
+    // creates table of tasks
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "countingCell", for: indexPath)
         
@@ -42,6 +44,7 @@ class CountingViewController: UIViewController, UITableViewDataSource, UITableVi
         return cell
     }
     
+    // moves to question page based on which task is selected
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         countTaskIndex = indexPath.row
         word = countTaskArray[countTaskIndex][0] as! String

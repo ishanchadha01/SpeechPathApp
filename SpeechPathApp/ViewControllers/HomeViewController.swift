@@ -30,6 +30,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         updateProgressBar()
     }
     
+    // updates progress bar by reading progress from firebase
     func updateProgressBar() -> Void {
         let userID = Auth.auth().currentUser?.uid
         Firestore.firestore().collection("users").document(userID!).getDocument { (document, error) in
@@ -40,6 +41,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
+    // prints first name of user by taking snapshot from firebase
     func printFirstName(_ label: UILabel) -> Void {
         let db = Firestore.firestore()
         db.collection("users").document(user!.email!)
@@ -56,14 +58,17 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
+    // gives number of sections in module table
     func numberOfSections(in tableView: UITableView) -> Int {
         return moduleArray.count
     }
     
+    // creates table view for modules
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
     
+    // formatting and table view for modules
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "homeCell", for: indexPath)
         cell.textLabel?.text = (moduleArray[indexPath.row]).uppercased()
@@ -77,6 +82,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cell
     }
     
+    // goes to selected module
+    // only counting module has been created
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         myIndex = indexPath.row
         if myIndex == 0 {

@@ -24,6 +24,8 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         setUpElements()
     }
+    
+    // creates page for login with formatting
     func setUpElements() {
         errorLabel.alpha = 0
         Utilities.styleTextField(emailTextField)
@@ -32,17 +34,8 @@ class LoginViewController: UIViewController {
         Utilities.styleFilledButton(loginButton)
         Utilities.styleFilledButton(backButton)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
+    // updates database and authentication to allow user in
     @IBAction func loginButtonTapped(_ sender: Any) {
         // Create cleaned versions of the text field
         let email = emailTextField.text!.trimmingCharacters(in: .whitespacesAndNewlines)
@@ -62,12 +55,13 @@ class LoginViewController: UIViewController {
         }
     }
     
-    
+    // shows different error messages based on what's passed in
     func showError(_ message: String) {
         errorLabel.text = message
         errorLabel.alpha = 1
     }
     
+    // sets home page as root view once logged in
     func transitionToHome() {
         let homeViewController = storyboard?.instantiateViewController(identifier: Constants.Storyboard.homeViewController) as? HomeViewController
         view.window?.rootViewController = homeViewController
