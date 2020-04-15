@@ -68,4 +68,7 @@ class LoginViewController: UIViewController {
         view.window?.makeKeyAndVisible()
     }
 
+    @IBAction func forgotPasswordTapped(_ sender: Any) {
+        performSegue(withIdentifier: "toForgotPassword", sender: self)
+    }
 }

@@ -58,14 +58,9 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
     }
     
-    // gives number of sections in module table
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return moduleArray.count
-    }
-    
     // creates table view for modules
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return moduleArray.count
     }
     
     // formatting and table view for modules
@@ -88,6 +83,8 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
         myIndex = indexPath.row
         if myIndex == 0 {
             performSegue(withIdentifier: "toCounting", sender: self)
+        } else if myIndex == 1 {
+            performSegue(withIdentifier: "toBlending", sender: self)
         }
     }
 

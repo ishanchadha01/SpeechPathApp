@@ -7,7 +7,25 @@
 		<key>SpeechPathApp.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>1</integer>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>A06D1A0D23649CAC00627487</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A06D1A2323649CAD00627487</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A06D1A2E23649CAD00627487</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		471002CDDD5F1DBC421FE6C1 /* Pods_SpeechPathApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8470AA5513D13604E0372F92 /* Pods_SpeechPathApp.framework */; };
 		861FDD222405D39300373BB5 /* creek.png in Resources */ = {isa = PBXBuildFile; fileRef = 861FDD0A2405D39200373BB5 /* creek.png */; };
 		861FDD232405D39300373BB5 /* creek.png in Resources */ = {isa = PBXBuildFile; fileRef = 861FDD0A2405D39200373BB5 /* creek.png */; };
 		861FDD242405D39300373BB5 /* creek.png in Resources */ = {isa = PBXBuildFile; fileRef = 861FDD0A2405D39200373BB5 /* creek.png */; };
@@ -103,12 +102,24 @@
 		86695BEA2425E20600F3F670 /* ZOOM0012.hprj in Resources */ = {isa = PBXBuildFile; fileRef = 86695BD32425E20600F3F670 /* ZOOM0012.hprj */; };
 		86695BEB2425E20600F3F670 /* horse.MP3 in Resources */ = {isa = PBXBuildFile; fileRef = 86695BD42425E20600F3F670 /* horse.MP3 */; };
 		86695BEC2425E20600F3F670 /* babble.MP3 in Resources */ = {isa = PBXBuildFile; fileRef = 86695BD52425E20600F3F670 /* babble.MP3 */; };
+		868FEE37244622B800205860 /* Pods_SpeechPathAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 868FEE35244622B800205860 /* Pods_SpeechPathAppTests.framework */; };
+		868FEE38244622B800205860 /* Pods_SpeechPathAppTests.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 868FEE35244622B800205860 /* Pods_SpeechPathAppTests.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		868FEE39244622B800205860 /* Pods_SpeechPathAppUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 868FEE36244622B800205860 /* Pods_SpeechPathAppUITests.framework */; };
+		868FEE3A244622B800205860 /* Pods_SpeechPathAppUITests.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 868FEE36244622B800205860 /* Pods_SpeechPathAppUITests.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		868FEE3B2446250800205860 /* Pods_SpeechPathApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8470AA5513D13604E0372F92 /* Pods_SpeechPathApp.framework */; };
+		868FEE3C2446250800205860 /* Pods_SpeechPathApp.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8470AA5513D13604E0372F92 /* Pods_SpeechPathApp.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		86D0C3F223F6533B0069BD18 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 86D0C3F123F6533B0069BD18 /* Info.plist */; };
 		86D0C3F323F6533B0069BD18 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 86D0C3F123F6533B0069BD18 /* Info.plist */; };
 		86D0C3F423F6533B0069BD18 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 86D0C3F123F6533B0069BD18 /* Info.plist */; };
 		86ECB5D823FBA42B00A9F454 /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86ECB5D723FBA42B00A9F454 /* AnswerViewController.swift */; };
 		86ECB5D923FBA42B00A9F454 /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86ECB5D723FBA42B00A9F454 /* AnswerViewController.swift */; };
 		86ECB5DA23FBA42B00A9F454 /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86ECB5D723FBA42B00A9F454 /* AnswerViewController.swift */; };
+		86F72F9724462CEA00808282 /* BlendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F72F9624462CEA00808282 /* BlendingViewController.swift */; };
+		86F72F9824462CEA00808282 /* BlendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F72F9624462CEA00808282 /* BlendingViewController.swift */; };
+		86F72F9924462CEA00808282 /* BlendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F72F9624462CEA00808282 /* BlendingViewController.swift */; };
+		86F72F9B2446838F00808282 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F72F9A2446838F00808282 /* ResetPasswordViewController.swift */; };
+		86F72F9C2446838F00808282 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F72F9A2446838F00808282 /* ResetPasswordViewController.swift */; };
+		86F72F9D2446838F00808282 /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86F72F9A2446838F00808282 /* ResetPasswordViewController.swift */; };
 		A06D1A2923649CAD00627487 /* SpeechPathAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06D1A2823649CAD00627487 /* SpeechPathAppTests.swift */; };
 		A06D1A3423649CAD00627487 /* SpeechPathAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06D1A3323649CAD00627487 /* SpeechPathAppUITests.swift */; };
 		A093CA562396D95C00EEB93D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A093CA2D2396D93900EEB93D /* HomeViewController.swift */; };
@@ -204,6 +215,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		868FEE3424461FF000205860 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				868FEE38244622B800205860 /* Pods_SpeechPathAppTests.framework in Embed Frameworks */,
+				868FEE3C2446250800205860 /* Pods_SpeechPathApp.framework in Embed Frameworks */,
+				868FEE3A244622B800205860 /* Pods_SpeechPathAppUITests.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		037A49A80A9D5AC404A5045D /* Pods-SpeechPathAppUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeechPathAppUITests.release.xcconfig"; path = "Target Support Files/Pods-SpeechPathAppUITests/Pods-SpeechPathAppUITests.release.xcconfig"; sourceTree = "<group>"; };
 		1D3E0815439C3A124775A907 /* Pods-SpeechPathAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeechPathAppTests.debug.xcconfig"; path = "Target Support Files/Pods-SpeechPathAppTests/Pods-SpeechPathAppTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -257,8 +284,12 @@
 		86695BD32425E20600F3F670 /* ZOOM0012.hprj */ = {isa = PBXFileReference; lastKnownFileType = file; name = ZOOM0012.hprj; path = audio/ZOOM0012.hprj; sourceTree = SOURCE_ROOT; };
 		86695BD42425E20600F3F670 /* horse.MP3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = horse.MP3; path = audio/horse.MP3; sourceTree = SOURCE_ROOT; };
 		86695BD52425E20600F3F670 /* babble.MP3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = babble.MP3; path = audio/babble.MP3; sourceTree = SOURCE_ROOT; };
+		868FEE35244622B800205860 /* Pods_SpeechPathAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_SpeechPathAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		868FEE36244622B800205860 /* Pods_SpeechPathAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_SpeechPathAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86D0C3F123F6533B0069BD18 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86ECB5D723FBA42B00A9F454 /* AnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
+		86F72F9624462CEA00808282 /* BlendingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlendingViewController.swift; sourceTree = "<group>"; };
+		86F72F9A2446838F00808282 /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
 		8E9A17271B3E35124ABA24CE /* Pods-SpeechPathApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeechPathApp.debug.xcconfig"; path = "Target Support Files/Pods-SpeechPathApp/Pods-SpeechPathApp.debug.xcconfig"; sourceTree = "<group>"; };
 		A06D1A0E23649CAC00627487 /* SpeechPathApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpeechPathApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A06D1A2423649CAD00627487 /* SpeechPathAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpeechPathAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -301,7 +332,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				471002CDDD5F1DBC421FE6C1 /* Pods_SpeechPathApp.framework in Frameworks */,
+				868FEE39244622B800205860 /* Pods_SpeechPathAppUITests.framework in Frameworks */,
+				868FEE3B2446250800205860 /* Pods_SpeechPathApp.framework in Frameworks */,
+				868FEE37244622B800205860 /* Pods_SpeechPathAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +360,8 @@
 		67D9AF976BB403966506A1E5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				868FEE35244622B800205860 /* Pods_SpeechPathAppTests.framework */,
+				868FEE36244622B800205860 /* Pods_SpeechPathAppUITests.framework */,
 				8470AA5513D13604E0372F92 /* Pods_SpeechPathApp.framework */,
 				42A7102C28BE9A2FB40E20CB /* Pods_SpeechPathAppTests.framework */,
 				BAB63B5E9000753A381C4530 /* Pods_SpeechPathAppUITests.framework */,
@@ -473,6 +508,8 @@
 				A093CA522396D95800EEB93D /* TableViewController.swift */,
 				A093CA2F2396D93B00EEB93D /* ViewController.swift */,
 				86ECB5D723FBA42B00A9F454 /* AnswerViewController.swift */,
+				86F72F9624462CEA00808282 /* BlendingViewController.swift */,
+				86F72F9A2446838F00808282 /* ResetPasswordViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -511,6 +548,7 @@
 				A06D1A0B23649CAC00627487 /* Frameworks */,
 				A06D1A0C23649CAC00627487 /* Resources */,
 				8B43BA1688F533E2045A0F9C /* [CP] Embed Pods Frameworks */,
+				868FEE3424461FF000205860 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -851,6 +889,8 @@
 				A093CA712396D95C00EEB93D /* SettingsViewController.swift in Sources */,
 				A093CA742396D95C00EEB93D /* LoginViewController.swift in Sources */,
 				A093CA5F2396D95C00EEB93D /* countingCell.swift in Sources */,
+				86F72F9B2446838F00808282 /* ResetPasswordViewController.swift in Sources */,
+				86F72F9724462CEA00808282 /* BlendingViewController.swift in Sources */,
 				A093CAB92396D95C00EEB93D /* CountingViewController.swift in Sources */,
 				A093CA5C2396D95C00EEB93D /* ViewController.swift in Sources */,
 				A093CACE2396DBF700EEB93D /* SceneDelegate.swift in Sources */,
@@ -871,6 +911,7 @@
 			files = (
 				A093CA752396D95C00EEB93D /* LoginViewController.swift in Sources */,
 				A093CA572396D95C00EEB93D /* HomeViewController.swift in Sources */,
+				86F72F9C2446838F00808282 /* ResetPasswordViewController.swift in Sources */,
 				A06D1A2923649CAD00627487 /* SpeechPathAppTests.swift in Sources */,
 				A093CA602396D95C00EEB93D /* countingCell.swift in Sources */,
 				A093CACF2396DBF700EEB93D /* SceneDelegate.swift in Sources */,
@@ -878,6 +919,7 @@
 				A093CA722396D95C00EEB93D /* SettingsViewController.swift in Sources */,
 				A093CA5D2396D95C00EEB93D /* ViewController.swift in Sources */,
 				A093CAA22396D95C00EEB93D /* RegisterViewController.swift in Sources */,
+				86F72F9824462CEA00808282 /* BlendingViewController.swift in Sources */,
 				A093CA9C2396D95C00EEB93D /* QuestionViewController.swift in Sources */,
 				A093CAC02396D95C00EEB93D /* TableViewController.swift in Sources */,
 				A093CA7B2396D95C00EEB93D /* Constants.swift in Sources */,
@@ -893,6 +935,7 @@
 			files = (
 				A093CA762396D95C00EEB93D /* LoginViewController.swift in Sources */,
 				A093CA582396D95C00EEB93D /* HomeViewController.swift in Sources */,
+				86F72F9D2446838F00808282 /* ResetPasswordViewController.swift in Sources */,
 				A06D1A3423649CAD00627487 /* SpeechPathAppUITests.swift in Sources */,
 				A093CA612396D95C00EEB93D /* countingCell.swift in Sources */,
 				A093CAD02396DBF700EEB93D /* SceneDelegate.swift in Sources */,
@@ -900,6 +943,7 @@
 				A093CA732396D95C00EEB93D /* SettingsViewController.swift in Sources */,
 				A093CA5E2396D95C00EEB93D /* ViewController.swift in Sources */,
 				A093CAA32396D95C00EEB93D /* RegisterViewController.swift in Sources */,
+				86F72F9924462CEA00808282 /* BlendingViewController.swift in Sources */,
 				A093CA9D2396D95C00EEB93D /* QuestionViewController.swift in Sources */,
 				A093CAC12396D95C00EEB93D /* TableViewController.swift in Sources */,
 				A093CA7C2396D95C00EEB93D /* Constants.swift in Sources */,

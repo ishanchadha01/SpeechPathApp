@@ -24,4 +24,8 @@ class SettingsViewController: UIViewController {
             print(logoutError)
         }
     }
+    
+    @IBAction func changePasswordTapped(_ sender: Any) {
+        performSegue(withIdentifier: "toResetPassword", sender: self)
+    }
 }

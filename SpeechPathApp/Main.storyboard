@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="taA-OL-5Cu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="taA-OL-5Cu">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -76,7 +76,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="oEb-L6-sg5">
-                                <rect key="frame" x="40" y="40" width="334" height="178.5"/>
+                                <rect key="frame" x="40" y="40" width="334" height="228.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j2J-Od-cJT">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="34"/>
@@ -97,8 +97,17 @@
                                             <action selector="loginButtonTapped:" destination="hZS-id-y0y" eventType="touchUpInside" id="rHd-gF-OGP"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lu7-jB-P6G">
+                                        <rect key="frame" x="0.0" y="158" width="334" height="30"/>
+                                        <state key="normal" title="Forgot Password">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="forgotPasswordTapped:" destination="hZS-id-y0y" eventType="touchUpInside" id="Q38-3B-mwa"/>
+                                        </connections>
+                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0bo-O4-HRI">
-                                        <rect key="frame" x="0.0" y="158" width="334" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="208" width="334" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -129,11 +138,66 @@
                         <outlet property="errorLabel" destination="0bo-O4-HRI" id="oBv-Y3-QX5"/>
                         <outlet property="loginButton" destination="9I8-MW-dP0" id="Hbl-bQ-lae"/>
                         <outlet property="passwordTextField" destination="j1r-1Q-Fh0" id="JNr-UL-9Lt"/>
+                        <segue destination="tzY-T1-eMH" kind="show" identifier="toForgotPassword" id="LD8-Ez-OJH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lli-t3-47A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1786.9565217391305" y="501.5625"/>
+        </scene>
+        <!--Reset Password View Controller-->
+        <scene sceneID="gwz-KJ-Nee">
+            <objects>
+                <viewController id="tzY-T1-eMH" customClass="ResetPasswordViewController" customModule="SpeechPathApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7Xq-RP-wmC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="rzA-eh-DAQ">
+                                <rect key="frame" x="93" y="64" width="218" height="237"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reset Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ADl-ba-NB3">
+                                        <rect key="frame" x="0.0" y="0.0" width="218" height="38.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hLC-00-Qjq">
+                                        <rect key="frame" x="0.0" y="76.5" width="218" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SDt-os-nqK">
+                                        <rect key="frame" x="0.0" y="148.5" width="218" height="30"/>
+                                        <state key="normal" title="Send Email">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="loginButtonTapped:" destination="hZS-id-y0y" eventType="touchUpInside" id="zlo-vW-FwW"/>
+                                            <action selector="sendEmailTapped:" destination="tzY-T1-eMH" eventType="touchUpInside" id="DS5-az-8Xq"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4s5-Wo-Yhh">
+                                        <rect key="frame" x="0.0" y="216.5" width="218" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="L4R-x8-vQk"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Bya-7Z-6TH"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="hLC-00-Qjq" id="t8N-Zw-lYO"/>
+                        <outlet property="errorLabel" destination="4s5-Wo-Yhh" id="X5a-1K-dh4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kSP-mQ-l2r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1007.2463768115942" y="1313.1696428571429"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="xkJ-AM-n1W">
@@ -144,7 +208,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GkA-te-51w">
-                                <rect key="frame" x="183" y="179" width="48" height="30"/>
+                                <rect key="frame" x="183" y="73" width="48" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Logout"/>
                                 <connections>
@@ -154,16 +218,60 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="Sj7-FZ-Dgt"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ulu-ly-yRt">
+                                <rect key="frame" x="147" y="173" width="123" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Change Password"/>
+                                <connections>
+                                    <action selector="changePasswordTapped:" destination="oJi-Cb-zss" eventType="touchUpInside" id="FAU-h0-oIM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="QBv-iS-u05"/>
                     </view>
                     <navigationItem key="navigationItem" id="A4n-on-jMR"/>
+                    <connections>
+                        <segue destination="tzY-T1-eMH" kind="show" identifier="toResetPassword" id="KOK-iy-QfW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="apl-EL-B7n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="9MA-NC-ZSx" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2555" y="1334"/>
+        </scene>
+        <!--Blending View Controller-->
+        <scene sceneID="RaS-nh-eiR">
+            <objects>
+                <viewController id="3tc-Gl-c3c" customClass="BlendingViewController" customModule="SpeechPathApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UzQ-gD-Kjy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Blending" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R3E-gm-6sU">
+                                <rect key="frame" x="147" y="37" width="121" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xfh-Ma-zag">
+                                <rect key="frame" x="337" y="20" width="57" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Settings"/>
+                                <connections>
+                                    <segue destination="oJi-Cb-zss" kind="show" id="jAj-RV-iKd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="tij-dn-Qmh"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="EaP-k2-grT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZyC-bu-8N3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3812" y="1334"/>
         </scene>
         <!--RegisterViewController-->
         <scene sceneID="lT7-hw-1iM">
@@ -310,6 +418,7 @@
                         <outlet property="progressBar" destination="Hsz-z0-873" id="y9A-Mz-dQN"/>
                         <outlet property="settingsButton" destination="gSr-n5-u2Z" id="br4-c0-9qW"/>
                         <segue destination="DCj-lu-njt" kind="show" identifier="toCounting" id="caX-kd-4b1"/>
+                        <segue destination="3tc-Gl-c3c" kind="show" identifier="toBlending" id="EF0-81-api"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZsR-Bj-mg6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -366,10 +475,10 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="countingCell" id="IdJ-Wk-lTA">
-                                                <rect key="frame" x="0.0" y="28" width="240" height="44"/>
+                                                <rect key="frame" x="0.0" y="28" width="240" height="43.5"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IdJ-Wk-lTA" id="Dxp-rQ-EEG">
-                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="44"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </tableViewCellContentView>
                                             </tableViewCell>
@@ -524,12 +633,13 @@
             <point key="canvasLocation" x="4960.8695652173919" y="669.64285714285711"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="arrow.left" catalog="system" width="64" height="48"/>
-    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="shz-qO-Hyb"/>
-        <segue reference="oAr-rW-Jjy"/>
-        <segue reference="Sj7-FZ-Dgt"/>
+        <segue reference="caX-kd-4b1"/>
+        <segue reference="4tu-3g-Ytk"/>
+        <segue reference="LD8-Ez-OJH"/>
+        <segue reference="yYQ-zQ-48t"/>
     </inferredMetricsTieBreakers>
+    <resources>
+        <image name="arrow.left" catalog="system" width="128" height="98"/>
+    </resources>
 </document>
