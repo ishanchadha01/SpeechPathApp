@@ -18,6 +18,7 @@ var player: AVAudioPlayer?
 class QuestionViewController: UIViewController {
     
     var user = Auth.auth().currentUser
+    var attempts = 2 // attempts per question
     @IBOutlet weak var dieBotRightButton: UIButton!
     @IBOutlet weak var dieBotLeftButton: UIButton!
     @IBOutlet weak var dieTopRightButton: UIButton!
@@ -98,7 +99,13 @@ class QuestionViewController: UIViewController {
         dieTopRightButton.setBackgroundImage(nil, for: .normal)
         dieBotLeftButton.setBackgroundImage(nil, for: .normal)
         dieBotRightButton.setBackgroundImage(nil, for: .normal)
-        tryAgainButton.alpha = 1
+        attempts -= 1
+        if (attempts > 0) {
+            tryAgainButton.alpha = 1
+            playHint(word)
+        } else {
+            performSegue(withIdentifier: "countingFromQuestion", sender: self)
+        }
     }
     
     // if answered correctly
@@ -133,6 +140,23 @@ class QuestionViewController: UIViewController {
     // plays sound for page
     func playSound(_ sound: String) -> Void {
         if let path = Bundle.main.path(forResource: sound, ofType: "MP3") {
+            do {
+                player = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
+                player?.play()
+                if player!.play() {
+                    print(word)
+                }
+            } catch let error {
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    // plays hint audio
+    func playHint(_ sound: String) -> Void {
+        // functionality to play hint audio
+        let hint_sound = sound + "_hint"
+        if let path = Bundle.main.path(forResource: hint_sound, ofType: "MP3") {
             do {
                 player = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: path))
                 player?.play()

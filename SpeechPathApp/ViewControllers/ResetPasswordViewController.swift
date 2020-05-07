@@ -18,6 +18,7 @@ class ResetPasswordViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        errorLabel.textColor = UIColor.red
         errorLabel.alpha = 0
     }
 
@@ -35,6 +36,7 @@ class ResetPasswordViewController: UIViewController {
                 self.showError("Error sending email")
             }
         }
+        logoutUser()
     }
     
     // shows different error messages based on what's passed in
