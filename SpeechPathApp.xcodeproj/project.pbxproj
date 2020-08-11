@@ -171,6 +171,8 @@
 		868FEE3A244622B800205860 /* Pods_SpeechPathAppUITests.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 868FEE36244622B800205860 /* Pods_SpeechPathAppUITests.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		868FEE3B2446250800205860 /* Pods_SpeechPathApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8470AA5513D13604E0372F92 /* Pods_SpeechPathApp.framework */; };
 		868FEE3C2446250800205860 /* Pods_SpeechPathApp.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8470AA5513D13604E0372F92 /* Pods_SpeechPathApp.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		86921A8324E28512001F1C2F /* app-design.png in Resources */ = {isa = PBXBuildFile; fileRef = 86921A8224E28512001F1C2F /* app-design.png */; };
+		86921A8524E28685001F1C2F /* firestore-spa.png in Resources */ = {isa = PBXBuildFile; fileRef = 86921A8424E28685001F1C2F /* firestore-spa.png */; };
 		86D0C3F223F6533B0069BD18 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 86D0C3F123F6533B0069BD18 /* Info.plist */; };
 		86D0C3F323F6533B0069BD18 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 86D0C3F123F6533B0069BD18 /* Info.plist */; };
 		86D0C3F423F6533B0069BD18 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 86D0C3F123F6533B0069BD18 /* Info.plist */; };
@@ -370,6 +372,8 @@
 		868684582464397900D7460F /* book_hint.MP3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = book_hint.MP3; path = hint_audio/book_hint.MP3; sourceTree = SOURCE_ROOT; };
 		868FEE35244622B800205860 /* Pods_SpeechPathAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_SpeechPathAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		868FEE36244622B800205860 /* Pods_SpeechPathAppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_SpeechPathAppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		86921A8224E28512001F1C2F /* app-design.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "app-design.png"; path = "../../../Desktop/app-design.png"; sourceTree = "<group>"; };
+		86921A8424E28685001F1C2F /* firestore-spa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "firestore-spa.png"; path = "../../../Desktop/firestore-spa.png"; sourceTree = "<group>"; };
 		86D0C3F123F6533B0069BD18 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86ECB5D723FBA42B00A9F454 /* AnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
 		86F72F9624462CEA00808282 /* BlendingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlendingViewController.swift; sourceTree = "<group>"; };
@@ -514,6 +518,8 @@
 		86ECB5DC23FBA69400A9F454 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				86921A8424E28685001F1C2F /* firestore-spa.png */,
+				86921A8224E28512001F1C2F /* app-design.png */,
 				A093CA4D2396D95400EEB93D /* backArrow.png */,
 				A093CA3A2396D94700EEB93D /* Dice2@2x.png */,
 				A093CA4A2396D95000EEB93D /* Dice3@2x.png */,
@@ -794,6 +800,7 @@
 				868684802464397900D7460F /* float_hint.MP3 in Resources */,
 				86695BD72425E20600F3F670 /* turkey.MP3 in Resources */,
 				A093CA802396D95C00EEB93D /* Dice5@2x.png in Resources */,
+				86921A8524E28685001F1C2F /* firestore-spa.png in Resources */,
 				868684622464397900D7460F /* message_hint.MP3 in Resources */,
 				86695BDC2425E20600F3F670 /* creek.MP3 in Resources */,
 				86695BE52425E20600F3F670 /* Play_SC.MP3 in Resources */,
@@ -836,6 +843,7 @@
 				86695BE32425E20600F3F670 /* Peanut_SC.MP3 in Resources */,
 				861FDD282405D39300373BB5 /* babble.png in Resources */,
 				861FDD552405D39300373BB5 /* message.png in Resources */,
+				86921A8324E28512001F1C2F /* app-design.png in Resources */,
 				8686848F2464397900D7460F /* noodle_hint.MP3 in Resources */,
 				8686845C2464397900D7460F /* neck_hint.MP3 in Resources */,
 			);
